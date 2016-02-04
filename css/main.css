@@ -1,0 +1,22 @@
+.container {
+	width: 62.5em;
+	margin: auto;
+}
+
+header {
+	background-color: rgb(255, 255, 0);
+	height: 10em;
+}
+
+#vasen-nav {
+	background-color: rgb(0, 255, 0);
+}
+
+#yla-nav {
+	background-color: rgb(55, 145, 124);
+}
+
+
+main {
+	background-color: rgb(100, 255, 255);
+}
