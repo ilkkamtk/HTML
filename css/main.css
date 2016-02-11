@@ -32,6 +32,14 @@
     float: left;
 }
 
+body {
+	font-family: 'allerregular';
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+	font-family: 'Passion One', cursive;
+}
+
 header {
 	background-image: url(../img/puubanneri.jpg);
     background-position: right;
