@@ -53,7 +53,7 @@ header img {
 }
 
 #vasen-nav {
-    width: 10em;
+    width: 100%;
     float: left;
 }
 
@@ -66,6 +66,11 @@ header img {
 
 #vasen-nav li {
 	border-bottom: 1px solid rgb(38, 39, 48);
+	display: none;
+}
+
+#vasen-nav li:first-child {
+	display: list-item;
 }
 
 #vasen-nav a, #yla-nav a {
@@ -80,22 +85,25 @@ header img {
 }
 
 #yla-nav {
-    width: 52.5em;
+    width: 100%;
     float: left;
 }
 
 #yla-nav li {
 	display: block;
 	float: left;
-	width: 25%;
+	width: 50%;
 	border-left: 1px solid rgb(38, 39, 48);
+	border-bottom: 1px solid rgb(38, 39, 48);
 	box-sizing: border-box;
 }
 
 main {
     float: left;
     padding: 0 2em 1em 2em;
-    width: 48.5em;
+    width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 6em;
 }
 
 main figure {
@@ -103,4 +111,47 @@ main figure {
     text-align: center;
     margin: 0 1em 1em 0;
 }
+
+main img {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+}
+
+@media screen and (min-width: 640px){
+	#vasen-nav {
+		width: 16%;
+	}
+	
+	#yla-nav, main {
+		width: 84%;
+	}	
+
+	main {
+		margin-bottom: 3em;
+	}
+	
+	#yla-nav li {
+		width: 25%;
+	}
+	
+	#vasen-nav li {
+		display: list-item !important;
+	}
+	
+	#vasen-nav li:first-child {
+		display: none !important;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 
