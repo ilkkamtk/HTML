@@ -57,15 +57,17 @@ textarea {
    ========================================================================== */
 
 .main-color {
-    background-color: #263248; /* HEX */
+    background-color: #263248;
+    /* HEX */
 }
 
 .secondary-color {
-     background-color: #FF9800;
+    background-color: #FF9800;
 }
 
 .tertiary-color {
-    background-color: rgb(126, 138, 162); /*  tai rgb */
+    background-color: rgb(126, 138, 162);
+    /*  tai rgb */
 }
 
 .white {
@@ -76,33 +78,26 @@ textarea {
     background-color: #000;
 }
 
-
-
-#main-menu {
-    
-}
+#main-menu {}
 
 header {
-    
+    background-image: url(../img/puu1.jpg);
+    background-position: right;
+    height: 10em;
 }
 
-#sub-menu {
-   
+header img {
+    height: 100%;
 }
 
-main {
-    
+#sub-menu {}
+
+main, aside, footer, header img {
+    padding: 1em;
+    box-sizing: border-box;
 }
 
-
-
-
-
-
-
-
-
-
+footer {}
 
 
 /* ==========================================================================
@@ -110,15 +105,28 @@ main {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-
+    body {
+        max-width: 62.5em;
+        margin: auto;
+    }
+    #content {
+        overflow: hidden;
+    }
+    main {
+        width: 80%;
+        float: left;
+    }
+    aside {
+        width: 20%;
+        float: left;
+    }
 }
 
 @media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {}
 
-}
 
 /* ==========================================================================
    Helper classes
@@ -168,6 +176,7 @@ main {
     *zoom: 1;
 }
 
+
 /* ==========================================================================
    Print styles
    ========================================================================== */
@@ -181,51 +190,41 @@ main {
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
     a,
     a:visited {
         text-decoration: underline;
     }
-
     a[href]:after {
         content: " (" attr(href) ")";
     }
-
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
-
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
     }
-
     pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
     thead {
         display: table-header-group;
     }
-
     tr,
     img {
         page-break-inside: avoid;
     }
-
     img {
         max-width: 100% !important;
     }
-
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
-
     h2,
     h3 {
         page-break-after: avoid;
