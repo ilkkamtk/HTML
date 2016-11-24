@@ -59,26 +59,63 @@ textarea {
 .main-color {
     background-color: #263248;
     /* HEX */
+    color: #FFF;
 }
 
 .secondary-color {
     background-color: #FF9800;
+    color: #FFF;
 }
 
 .tertiary-color {
     background-color: rgb(126, 138, 162);
     /*  tai rgb */
+    color: #FFF;
 }
 
 .white {
     background-color: #FFF;
+    color: #000;
 }
 
 .black {
     background-color: #000;
+    color: #fff;
 }
 
-#main-menu {}
+.button {
+    display: block;
+    line-height: 2em;
+    text-align: center;
+    /* border-radius: 6px; */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#main-menu ul,
+#sub-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+#main-menu ul {
+    justify-content: space-around;
+}
+
+#main-menu li,
+#sub-menu li {
+    width: 8em;
+}
+
+#main-menu a:hover,
+#sub-menu a:hover {
+    background: rgb(146, 158, 182);
+}
 
 header {
     background-image: url(../img/puu1.jpg);
@@ -90,9 +127,15 @@ header img {
     height: 100%;
 }
 
-#sub-menu {}
+#sub-menu ul {
+    font-size: 0.8em;
+    justify-content: start;
+}
 
-main, aside, footer, header img {
+main,
+aside,
+footer,
+header img {
     padding: 1em;
     box-sizing: border-box;
 }
@@ -108,17 +151,19 @@ footer {}
     body {
         max-width: 62.5em;
         margin: auto;
-    }
-    #content {
-        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
     }
     main {
         width: 80%;
-        float: left;
     }
     aside {
         width: 20%;
-        float: left;
+    }
+    nav,
+    header,
+    footer {
+        width: 100%;
     }
 }
 
