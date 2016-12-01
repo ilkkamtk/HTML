@@ -95,32 +95,52 @@ a {
     text-decoration: none;
 }
 
+#main-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 7em;
+}
+
 #main-menu ul,
 #sub-menu ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
 }
 
 #main-menu ul {
     justify-content: space-around;
 }
 
-#main-menu li,
-#sub-menu li {
-    width: 8em;
+#main-menu li {
+    width: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    padding: .5em;
 }
 
-#main-menu a:hover,
-#sub-menu a:hover {
-    background: rgb(146, 158, 182);
+#main-menu li:first-child {
+    display: list-item;
+    background-color: initial;
+}
+
+#sub-menu li {
+    width: 50%;
+}
+
+#main-menu a {
+    text-align: right;
 }
 
 header {
     background-image: url(../img/puu1.jpg);
     background-position: right;
     height: 10em;
+    position: relative;
 }
 
 header img {
@@ -140,6 +160,16 @@ header img {
     box-sizing: border-box;
 }
 
+figure {
+    text-align: center;
+    margin: 0;
+    padding: 0 1em;
+}
+
+figure img {
+    width: 100%;
+}
+
 footer {}
 
 
@@ -147,7 +177,7 @@ footer {}
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 43em) {
     body {
         max-width: 62.5em;
         margin: auto;
@@ -164,6 +194,34 @@ footer {}
     header,
     footer {
         width: 100%;
+    }
+    #main-menu {
+        position: absolute;
+        top: .5em;
+        right: 2em;
+        width: 32em;
+    }
+    #main-menu a {
+        text-align: center;
+    }
+    #main-menu li,
+    #sub-menu li {
+        width: 8em;
+        background-color: initial;
+    }
+    #main-menu a:hover,
+    #sub-menu a:hover {
+        background: rgba(146, 158, 182, 0.5);
+    }
+    #main-menu li {
+        display: list-item !important;
+    }
+    #main-menu li:first-child {
+        display: none !important;
+    }
+    figure {
+        width: 40%;
+        float: left;
     }
 }
 
